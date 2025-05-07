@@ -6,10 +6,10 @@ import threading
 import numpy as np
 from gpiozero import OutputDevice
 
-from pid import Incremental_PID
+from test_modules.pid import Incremental_PID
 #from command import COMMAND as cmd # Removed cmd import
-from imu import IMU
-from servo import Servo
+from test_modules.imu import IMU
+from test_modules.servo import Servo
 
 class Control:
     def __init__(self):

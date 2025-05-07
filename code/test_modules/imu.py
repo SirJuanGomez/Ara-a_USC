@@ -2,7 +2,7 @@
 import time
 import math
 import os
-from kalman import Kalman_filter
+from test_modules.kalman import Kalman_filter
 from mpu6050 import mpu6050
 
 class IMU:
