@@ -102,9 +102,9 @@ class Control:
             self.servo.set_servo_angle(11, self.current_angles[1][1])
             self.servo.set_servo_angle(10, self.current_angles[1][2])
             # Leg 3
-            self.servo.set_servo_angle(9, self.current_angles[2][0])
-            self.servo.set_servo_angle(8, self.current_angles[2][1])
-            self.servo.set_servo_angle(31, self.current_angles[2][2])
+            self.servo.set_servo_angle(3, self.current_angles[2][0])
+            self.servo.set_servo_angle(2, self.current_angles[2][1])
+            self.servo.set_servo_angle(1, self.current_angles[2][2])
             # Leg 6
             self.servo.set_servo_angle(16, self.current_angles[5][0])
             self.servo.set_servo_angle(17, self.current_angles[5][1])
@@ -114,9 +114,9 @@ class Control:
             self.servo.set_servo_angle(20, self.current_angles[4][1])
             self.servo.set_servo_angle(21, self.current_angles[4][2])
             # Leg 4
-            self.servo.set_servo_angle(22, self.current_angles[3][0])
-            self.servo.set_servo_angle(23, self.current_angles[3][1])
-            self.servo.set_servo_angle(27, self.current_angles[3][2])
+            self.servo.set_servo_angle(29, self.current_angles[3][0])
+            self.servo.set_servo_angle(30, self.current_angles[3][1])
+            self.servo.set_servo_angle(31, self.current_angles[3][2])
         else:
             print("This coordinate point is out of the active range")
 
