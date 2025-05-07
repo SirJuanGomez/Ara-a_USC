@@ -1,4 +1,4 @@
-from control import Control
+from test_modules.control import Control
 
 robot = Control()
 
