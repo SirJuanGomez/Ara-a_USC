@@ -1,4 +1,4 @@
-from test_modules.servo import Servo
+from servo import Servo
 
 S = Servo()
 
