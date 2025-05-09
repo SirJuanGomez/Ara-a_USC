@@ -2,33 +2,27 @@ from test_modules.servo import Servo
 
 S = Servo()
 
-list_m_d = [14, 11, 2]
-list_m_i = [17, 20, 30]
-list_p_d = [13, 10, 1]
-list_p_i = [18, 21, 31]
+def iniciar():
+    for i in range(32):
+        S.set_servo_angle(i, 90)
 
-# Posiciones específicas para cada grupo
-pos_m_d = 170
-pos_m_i = 10
-pos_p_d = 90
-pos_p_i = 90
+iniciar()
 
 while True:
-    # Mueve los servos del grupo m_d
-    for servo_id in list_m_d:
-        S.mover(servo_id, pos_m_d)
+    try:
+        entrada = input("Introduce el número del servo (0-31) y el ángulo (0-180), separados por un espacio: ")
+        partes = entrada.strip().split()
 
-    # Mueve los servos del grupo m_i
-    for servo_id in list_m_i:
-        S.mover(servo_id, pos_m_i)
+        if len(partes) != 2:
+            print("Debes introducir dos valores: servo y ángulo.")
+            continue
 
-    # Mueve los servos del grupo p_d
-    for servo_id in list_p_d:
-        S.mover(servo_id, pos_p_d)
+        servo_id = int(partes[0])
+        angulo = int(partes[1])
 
-    # Mueve los servos del grupo p_i
-    for servo_id in list_p_i:
-        S.mover(servo_id, pos_p_i)
-
-    print("Todos los servos fueron movidos a sus posiciones respectivas.")
-    break  # Elimina esto si quieres que siga corriendo en bucle
+        if 0 <= servo_id < 32 and 0 <= angulo <= 180:
+            S.set_servo_angle(servo_id, angulo)
+        else:
+            print("Servo debe estar entre 0 y 31, y ángulo entre 0 y 180.")
+    except ValueError:
+        print("Entrada no válida. Asegúrate de introducir números enteros.")
